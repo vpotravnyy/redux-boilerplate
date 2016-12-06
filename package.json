@@ -39,6 +39,7 @@
     "react-redux": "^4.4.6",
     "react-transform-hmr": "^1.0.4",
     "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
     "webpack": "^1.13.3",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-hot-middleware": "^2.13.2"

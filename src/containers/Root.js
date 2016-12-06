@@ -3,13 +3,19 @@
 // is best place to do it. Router is such example
 
 import React, { Component } from 'react'
+import { Provider } from 'react-redux'
+
+import createStore from '../redux/createStore'
+import Shell from './Shell'
+
+const store = createStore()
 
 export default class Root extends Component {
   render () {
     return (
-      <div>
-        Yay, I'm rendered by React! ^_^
-      </div>
+      <Provider store={store}>
+        <Shell />
+      </Provider>
     )
   }
 }
