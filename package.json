@@ -1,22 +1,18 @@
 {
-  "name": "redux-boilerplate",
+  "name": "!!!!!CHANGE_ME!!!!!",
   "version": "1.0.0",
-  "description": "A quick React-Redux boilerplate with Webpack & Babel to start new projects",
+  "description": "!!!!!CHANGE_ME!!!!!",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack -p --config webpack.prod.config.js"
   },
+  "author": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vpotravnyy/redux-boilerplate.git"
+    "url": "git+https://github.com/!!!!!CHANGE_ME!!!!!.git"
   },
-  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vpotravnyy/redux-boilerplate/issues"
-  },
-  "homepage": "https://github.com/vpotravnyy/redux-boilerplate#readme",
   "devDependencies": {
     "babel-eslint": "^7.1.1",
     "eslint": "^3.11.1",
