@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux'
-import messages from './messages'
-import inputBox from './inputBox'
+import reducer from './reducer'
 
 const rootReducer = combineReducers({
-  messages,
-  inputBox
+  reducer
 })
 
 export default rootReducer

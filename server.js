@@ -4,27 +4,13 @@ var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
 var config = require('./webpack.config')
 
-// Create server
 var Express = require('express')
 var app = new Express()
 var port = 3000
 
-// Launch webpack-compiler to compile bundle.js
 var compiler = webpack(config)
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
 app.use(webpackHotMiddleware(compiler))
-
-// Simple API
-app.get('/api/quote', function (req, res) {
-  var quotes = require('./quotes.json')
-  var i = Math.random() * quotes.length | 0
-  setTimeout(function () {
-    res.set('Content-Type', 'application/json')
-    res.send({
-      quote: quotes[i]
-    })
-  }, 1000)
-})
 
 // Catch all requests and forward them to index.html
 app.use(function (req, res) {
