@@ -1,7 +1,10 @@
-export const initialState = {
-  message: 'Initial message'
-}
+import { combineReducers } from 'redux'
+import messages from './messages'
+import inputBox from './inputBox'
 
-export default function rootReducer (state = initialState, action) {
-  return state
-}
+const rootReducer = combineReducers({
+  messages,
+  inputBox
+})
+
+export default rootReducer

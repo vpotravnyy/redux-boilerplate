@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 
 import createStore from '../redux/createStore'
-import Shell from './Shell'
+import MessengerContainer from './MessengerContainer'
 
 const store = createStore()
 
@@ -14,7 +14,7 @@ export default class Root extends Component {
   render () {
     return (
       <Provider store={store}>
-        <Shell />
+        <MessengerContainer />
       </Provider>
     )
   }
