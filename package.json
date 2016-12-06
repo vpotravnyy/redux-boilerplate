@@ -1,0 +1,46 @@
+{
+  "name": "redux-boilerplate",
+  "version": "1.0.0",
+  "description": "A quick React-Redux boilerplate with Webpack & Babel to start new projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack -p --config webpack.prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpotravnyy/redux-boilerplate.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vpotravnyy/redux-boilerplate/issues"
+  },
+  "homepage": "https://github.com/vpotravnyy/redux-boilerplate#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.11.1",
+    "eslint-plugin-babel": "^4.0.0",
+    "eslint-plugin-react": "^6.8.0",
+    "standard": "^8.6.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2016": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "express": "^4.14.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^4.4.6",
+    "react-transform-hmr": "^1.0.4",
+    "redux": "^3.6.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2"
+  }
+}
