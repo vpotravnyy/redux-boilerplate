@@ -1,8 +1,16 @@
+import {
+  UPDATE_VALUE,
+  ADD_MESSAGE,
+  REMOVE_MESSAGE,
+  GET_QUOTE_REQUEST,
+  GET_QUOTE_SUCCESS,
+  GET_QUOTE_FAILURE
+} from '../../constants/actions'
 import { CALL_API } from 'redux-api-middleware'
 
 export const updateBoxValue = (value) => {
   return {
-    type: 'UPDATE_VALUE',
+    type: UPDATE_VALUE,
     value
   }
 }
@@ -17,7 +25,7 @@ export const addMessage = () => {
     const { inputBox: {value} } = getState()
     if (value) {
       dispatch({
-        type: 'ADD_MESSAGE',
+        type: ADD_MESSAGE,
         message: value
       })
     }
@@ -26,7 +34,7 @@ export const addMessage = () => {
 
 export const removeMessage = (index) => {
   return {
-    type: 'REMOVE_MESSAGE',
+    type: REMOVE_MESSAGE,
     index
   }
 }
@@ -36,7 +44,7 @@ export const getQuote = () => {
     [CALL_API]: {
       endpoint: '/api/quote',
       method: 'GET',
-      types: ['GET_QUOTE_REQUEST', 'GET_QUOTE_SUCCESS', 'GET_QUOTE_FAILURE']
+      types: [GET_QUOTE_REQUEST, GET_QUOTE_SUCCESS, GET_QUOTE_FAILURE]
     }
   }
 }
