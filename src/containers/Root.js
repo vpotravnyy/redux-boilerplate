@@ -5,8 +5,8 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 
-import createStore from '../redux/createStore'
-import MessengerContainer from './MessengerContainer'
+import createStore from '_redux/createStore'
+import MessengerContainer from '_containers/MessengerContainer'
 
 const store = createStore()
 

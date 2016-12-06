@@ -15,6 +15,18 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
+  resolve: {
+    root: path.resolve(__dirname),
+    alias: {
+      _components: 'src/components',
+      _containers: 'src/containers',
+      _constants: 'src/constants',
+      _redux: 'src/redux',
+      _actions: 'src/redux/actions',
+      _reducers: 'src/redux/reducers'
+    },
+    extensions: ['', '.json', '.js', '.jsx']
+  },
   module: {
     loaders: [{
       test: /\.js$/,

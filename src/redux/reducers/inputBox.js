@@ -4,7 +4,7 @@ import {
   GET_QUOTE_REQUEST,
   GET_QUOTE_SUCCESS,
   GET_QUOTE_FAILURE
-} from '../../constants/actions'
+} from '_constants/actions'
 
 export const initialState = {
   value: '',

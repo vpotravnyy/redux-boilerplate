@@ -1,7 +1,7 @@
 import {
   ADD_MESSAGE,
   REMOVE_MESSAGE
-} from '../../constants/actions'
+} from '_constants/actions'
 
 export const initialState = []
 

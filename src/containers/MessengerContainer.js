@@ -7,11 +7,11 @@ import {
   removeMessage,
   updateBoxValue,
   getQuote
-} from '../redux/actions/messageActions'
+} from '_actions/messageActions'
 
 // Components
-import MessageList from '../components/MessageList'
-import InputBox from '../components/InputBox'
+import MessageList from '_components/MessageList'
+import InputBox from '_components/InputBox'
 
 class MessengerContainer extends Component {
   render () {
