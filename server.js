@@ -14,6 +14,16 @@ var compiler = webpack(config)
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
 app.use(webpackHotMiddleware(compiler))
 
+// Simple API
+app.get('/api/quote', function (req, res) {
+  var quotes = require('./quotes.json')
+  var i = Math.random() * quotes.length | 0
+  res.set('Content-Type', 'application/json')
+  res.send({
+    quote: quotes[i]
+  })
+})
+
 // Catch all requests and forward them to index.html
 app.use(function (req, res) {
   fs.readFile(__dirname + '/dist/index.html', (err, indexData) => {
