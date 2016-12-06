@@ -5,7 +5,8 @@ import { connect } from 'react-redux'
 import {
   addMessage,
   removeMessage,
-  updateBoxValue
+  updateBoxValue,
+  getQuote
 } from '../redux/actions/messageActions'
 
 // Components
@@ -19,7 +20,8 @@ class MessengerContainer extends Component {
       inputBox,
       addMessage,
       removeMessage,
-      updateBoxValue
+      updateBoxValue,
+      getQuote
     } = this.props
 
     return (
@@ -34,6 +36,7 @@ class MessengerContainer extends Component {
             {...inputBox}
             onChange={updateBoxValue}
             onSubmit={addMessage}
+            getQuote={getQuote}
           />
         </main>
       </div>
@@ -46,7 +49,8 @@ MessengerContainer.propTypes = {
   inputBox: PropTypes.object,
   addMessage: PropTypes.func.isRequired,
   removeMessage: PropTypes.func.isRequired,
-  updateBoxValue: PropTypes.func.isRequired
+  updateBoxValue: PropTypes.func.isRequired,
+  getQuote: PropTypes.func.isRequired
 }
 
 function mapStateToProps (state) {
@@ -60,7 +64,8 @@ function mapDispatchToProps (dispatch) {
   return {
     addMessage: messageText => dispatch(addMessage(messageText)),
     removeMessage: i => dispatch(removeMessage(i)),
-    updateBoxValue: value => dispatch(updateBoxValue(value))
+    updateBoxValue: value => dispatch(updateBoxValue(value)),
+    getQuote: () => dispatch(getQuote())
   }
 }
 

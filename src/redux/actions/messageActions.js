@@ -1,3 +1,5 @@
+import { CALL_API } from 'redux-api-middleware'
+
 export const updateBoxValue = (value) => {
   return {
     type: 'UPDATE_VALUE',
@@ -26,5 +28,15 @@ export const removeMessage = (index) => {
   return {
     type: 'REMOVE_MESSAGE',
     index
+  }
+}
+
+export const getQuote = () => {
+  return {
+    [CALL_API]: {
+      endpoint: '/api/quote',
+      method: 'GET',
+      types: ['GET_QUOTE_REQUEST', 'GET_QUOTE_SUCCESS', 'GET_QUOTE_FAILURE']
+    }
   }
 }

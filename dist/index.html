@@ -44,7 +44,7 @@
       }
       .inputBox textarea {
         height: 80px;
-        width: calc(100% - 100px);
+        width: calc(100% - 190px);
         box-sizing: border-box;
         border: none;
       }
@@ -57,12 +57,20 @@
         background: #cfc;
         border: none;
         outline: none;
+        cursor: pointer;
+      }
+      .inputBox button[disabled] {
+        filter: grayscale();
+        cursor: default;
       }
       .inputBox button:hover {
         background: #9d9;
       }
       .inputBox button:active {
         background: #7b7;
+      }
+      .inputBox .getQuoteBtn {
+        right: 115px;
       }
       .messageList {
         position: absolute;

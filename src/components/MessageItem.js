@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 
 function convertNewlineToBreak (string) {
-  return string.split('\n').map(line => (
-    <span>
+  return string.split('\n').map((line, j) => (
+    <span key={j}>
       {line}
       <br />
     </span>

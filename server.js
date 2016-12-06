@@ -18,10 +18,12 @@ app.use(webpackHotMiddleware(compiler))
 app.get('/api/quote', function (req, res) {
   var quotes = require('./quotes.json')
   var i = Math.random() * quotes.length | 0
-  res.set('Content-Type', 'application/json')
-  res.send({
-    quote: quotes[i]
-  })
+  setTimeout(function () {
+    res.set('Content-Type', 'application/json')
+    res.send({
+      quote: quotes[i]
+    })
+  }, 1000)
 })
 
 // Catch all requests and forward them to index.html
