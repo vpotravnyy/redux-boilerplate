@@ -23,7 +23,8 @@ module.exports = {
       _constants: 'src/constants',
       _redux: 'src/redux',
       _actions: 'src/redux/actions',
-      _reducers: 'src/redux/reducers'
+      _reducers: 'src/redux/reducers',
+      _helpers: 'src/helpers'
     },
     extensions: ['', '.json', '.js', '.jsx']
   },
